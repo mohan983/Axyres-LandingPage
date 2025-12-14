@@ -458,6 +458,118 @@ section {
     margin-right: 10px;
 }
 
+/* Faqs */
+h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #ffffff, var(--primary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #141420;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #2a2a3a;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #00d9c9;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 217, 201, 0.1);
+}
+
+.faq-question {
+    padding: 25px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #f0f0f0;
+}
+
+.faq-question:hover {
+    color: #00d9c9;
+}
+
+.faq-icon {
+    color: #00d9c9;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-item.active .faq-icon i {
+    content: "\f068"; /* FontAwesome minus icon */
+}
+
+.faq-answer {
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: #a0a0b0;
+    line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 30px 30px 30px;
+    max-height: 200px;
+}
+
+.faq-answer p {
+    margin-bottom: 15px;
+}
+
+.faq-answer strong {
+    color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 60px 0;
+    }
+    
+    .faq-question {
+        padding: 20px;
+        font-size: 1.1rem;
+    }
+    
+    .faq-answer {
+        padding: 0 20px;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 20px 20px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .faq-question {
+        padding: 18px;
+        font-size: 1rem;
+    }
+}
+
 /* Footer */
 footer {
     background-color: #08080c;

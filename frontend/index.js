@@ -70,21 +70,13 @@ async function storeEmailInDatabase(email) {
     } catch (error) {
         console.error('Network error:', error);
         
-        // Fallback to localStorage
-        let emails = JSON.parse(localStorage.getItem('axyres_emails')) || [];
-        if (!emails.includes(email)) {
-            emails.push(email);
-            localStorage.setItem('axyres_emails', JSON.stringify(emails));
-        }
-        
         return { 
             success: true, 
-            message: 'Email saved locally (backend unreachable). We\'ll sync when connection is restored.' 
+            message: 'Backend Unreachable' 
         };
     }
 }
 
-// Handle form submission
 // Handle form submission
 forms.forEach(form => {
     form.addEventListener('submit', async function(e) {
@@ -177,4 +169,42 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('DOMContentLoaded', function() {
     const emails = JSON.parse(localStorage.getItem('axyres_emails')) || [];
     console.log(`Existing emails in database: ${emails.length}`);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    // Remove active class from all items initially
+    faqItems.forEach(item => {
+        item.classList.remove('active');
+    });
+    
+    // Set first FAQ as active by default (optional - remove if you want all closed initially)
+    // faqItems[0].classList.add('active');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const icon = item.querySelector('.faq-icon i');
+        
+        question.addEventListener('click', () => {
+            // Check if current item is already active
+            const isActive = item.classList.contains('active');
+            
+            // Close all FAQ items
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+                const otherIcon = otherItem.querySelector('.faq-icon i');
+                otherIcon.classList.remove('fa-minus');
+                otherIcon.classList.add('fa-plus');
+            });
+            
+            // If it wasn't active before, open it
+            if (!isActive) {
+                item.classList.add('active');
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            }
+            // If it was active, it's now closed (all are closed)
+        });
+    });
 });
