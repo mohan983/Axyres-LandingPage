@@ -34,7 +34,7 @@ function validateEmail(email) {
 async function storeEmailInDatabase(email) {
     try {
         // Send email as a proper JSON object, not a plain string
-        const response = await fetch('http://localhost:4000/api/subscribers/add', {
+        const response = await fetch('https://axyres-landingpage.onrender.com/api/subscribers/add', {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json' 
