@@ -11,7 +11,11 @@ const PORT = process.env.PORT || 4000
 // Middleware
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(cors())
+app.use(cors({
+  origin: 'https://axyres-landing-page.axyres.com',
+  methods: ['POST'],
+  credentials: true
+}));
 // Serve static files (for uploaded images)
 app.use('/uploads', express.static('uploads'))
 
