@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axyres - AI Resume Tailoring</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="./images/Logo.png" style="width: 150px;"/>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#how">How It Works</a>
+                <a href="#features">Features</a>
+                <a href="#results">Results</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#hero" class="cta-button">Get Early Access</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="launch-badge">
+                <i class="fas fa-rocket"></i> Launching January 2026
+            </div>
+            
+            <h1>Cut <span class="hero-span">10-15 minutes</span> down to 15 seconds</h1>
+            
+            <p class="hero-subtitle">
+                Axyres turns any job posting into a perfectly tailored, ATS-friendly resume in just 15 seconds. 
+                Apply to more jobs. Land 2x more interviews.
+            </p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <i class="fas fa-users stat-icon"></i>
+                    <span>Join 500 founding members</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-shield-alt stat-icon"></i>
+                    <span>Full refund before launch</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-ban stat-icon"></i>
+                    <span>No spam, ever</span>
+                </div>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-item traditional">
+                    <h3>Traditional Way</h3>
+                    <div class="time-display">10/15 min</div>
+                    <p>Manual tailoring per job</p>
+                </div>
+                
+                <div class="comparison-item axyres">
+                    <h3>Axyres</h3>
+                    <div class="time-display">15 sec</div>
+                    <p>AI-powered instant tailoring</p>
+                </div>
+            </div>
+            
+            <!-- Email Form -->
+            <div class="email-form">
+                <div id="successMessage" class="message success-message">
+                    <i class="fas fa-check-circle"></i> Thank you! We've received your email and will notify you when early access begins.
+                </div>
+                
+                <div id="errorMessage" class="message error-message">
+                    <i class="fas fa-exclamation-circle"></i> Please enter a valid email address.
+                </div>
+                
+                <form id="earlyAccessForm">
+                    <div class="form-group">
+                        <label for="email">Get Early Access</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            class="form-input" 
+                            placeholder="Enter your email address" 
+                            required
+                        >
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-lock"></i> Claim Founder Spot
+                    </button>
+                </form>
+                
+                <p class="form-note">
+                    Only 500 founder spots available • $60/year (37% off) • Full refund before launch
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Challenge Section -->
+    <section id="challenge">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The brutal math of modern job searching</h2>
+                <p class="section-subtitle">
+                    Why qualified candidates get rejected before humans even see their resume
+                </p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">10/15 min</div>
+                    <p>Wasted per application with manual tailoring</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">36%</div>
+                    <p>Of resumes rejected for being too generic</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">7.4 sec</div>
+                    <p>Average time recruiters spend reviewing resumes</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">2-3%</div>
+                    <p>Generic resumes that result in interviews</p>
+                </div>
+            </div>
+            
+            <div class="email-form" style="max-width: 800px;">
+                <p style="text-align: center; margin-bottom: 20px; font-size: 1.1rem;">
+                    Job seekers face an impossible choice: spend 10/15 minutes tailoring each resume (applying to just 3-5 jobs per week), or send generic resumes that get rejected by ATS systems before humans ever see them.
+                </p>
+                
+                <form id="challengeForm">
+                    <div class="form-group">
+                        <input 
+                            type="email" 
+                            id="email2" 
+                            class="form-input" 
+                            placeholder="Enter your email to get early access" 
+                            required
+                        >
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-bolt"></i> Cut Your Application Time to 15 Seconds
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how" style="background-color: #0f0f1a;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">From job posting to tailored resume in 15 seconds</h2>
+                <p class="section-subtitle">
+                    One Master Resume. Instant tailoring. Any job posting.
+                </p>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Browse jobs anywhere</h3>
+                    <p>LinkedIn, Indeed, company career pages — anywhere you find opportunities</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>One-click extension</h3>
+                    <p>Chrome extension automatically scrapes job details, requirements, and company info</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI tailors instantly</h3>
+                    <p>Your Master Resume transforms into a perfectly matched, ATS-optimized resume</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-file-export"></i>
+                    </div>
+                    <h3>Export & apply</h3>
+                    <p>Download as PDF, DOCX, or plain text — ready to submit in seconds</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Dual-mode intelligence for every situation</h2>
+                <p class="section-subtitle">
+                    Turbo Mode for volume. Precision Mode for your dream roles.
+                </p>
+            </div>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Turbo Mode</h3>
+                    <p>One-click instant tailoring in 15 seconds. Apply to 20-50 jobs in an hour. Perfect for high-volume applications.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Precision Mode</h3>
+                    <p>Conversational AI refines bullets, rewrites sections, adjusts tone, and metricizes accomplishments. 3-5 minutes for premium roles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section id="results" style="background-color: #0f0f1a;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tailored resumes transform job search outcomes</h2>
+                <p class="section-subtitle">
+                    Data-backed results that change the game
+                </p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">2.21x</div>
+                    <p>More interview callbacks with tailored resumes</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">55.3%</div>
+                    <p>Higher interview rate vs generic applications</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">98%</div>
+                    <p>Faster than manual tailoring</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Join the first 500 founders</h2>
+                <p class="section-subtitle">
+                    Exclusively free for first 500 users, early access, and direct influence on the product
+                </p>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-badge">Best Value</div>
+                
+                <div class="pricing-header">
+                    <h3>Founder Pricing</h3>
+                    <div class="pricing-price">
+                        Free
+                    </div>
+                    <!-- <div class="pricing-period">per year (37% founder discount)</div> -->
+                </div>
+                
+                <ul class="benefits-list">
+                    <li><i class="fas fa-check"></i> Free access during the beta period</li>
+                    <li><i class="fas fa-check"></i> Full resume tailoring for job applications</li>
+                    <li><i class="fas fa-check"></i> Priority access to new features</li>
+                    <li><i class="fas fa-check"></i> Direct influence on how Axyres evolves</li>
+                </ul>
+                
+                <form id="pricingForm">
+                    <div class="form-group">
+                        <input 
+                            type="email" 
+                            id="email3" 
+                            class="form-input" 
+                            placeholder="Your email address" 
+                            required
+                        >
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" style="font-size: 1.2rem;">
+                        <i class="fas fa-crown"></i> Claim Your Founder Spot
+                    </button>
+                </form>
+                
+                <!-- <p style="text-align: center; margin-top: 20px; color: var(--text-muted); font-size: 0.9rem;">
+                    Only 500 spots available • No risk. Cancel anytime. Full refund if you're not satisfied before launch.
+                </p> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">Axyres</div>
+                    <p style="color: var(--text-muted); max-width: 300px;">
+                        AI-powered resume tailoring that cuts application time from 15 minutes to 15 seconds.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <div class="footer-links">
+                        <a href="#how">How It Works</a>
+                        <a href="#features">Features</a>
+                        <a href="#results">Results</a>
+                        <a href="#pricing">Pricing</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <div class="footer-links">
+                        <a href="#">About</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Refund Policy</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Axyres. All rights reserved. Launching January 2026.
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
